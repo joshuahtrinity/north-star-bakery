@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>North Star Bakery | Products</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -26,13 +27,16 @@
     <section>
       <h2>Fresh Bread</h2>
       <div class="product-grid">
-        <div>
+        <article class="product-choice">
           <img src="bakery-bread_c.png" alt="Fresh artisan breads from North Star Bakery">
+          <h3>Fresh Bread Assortment</h3>
           <p>North Star Bakery offers crusty loaves, sandwich breads, and seasonal choices. The bread is made in small batches so customers can get a fresh product.</p>
-        </div>
-        <figure class="card">
+          <button class="favorite-button" type="button" data-product-id="fresh-bread">Save to Favorites</button>
+        </article>
+        <figure class="card product-choice">
           <img src="bakery-signature-loaf_c.png" alt="North Star Bakery signature loaf with a golden crust">
           <figcaption>Signature Loaf, one of the bakery's featured bread options.</figcaption>
+          <button class="favorite-button" type="button" data-product-id="signature-loaf">Save to Favorites</button>
         </figure>
       </div>
     </section>
@@ -40,19 +44,31 @@
     <section>
       <h2>More Bakery Options</h2>
       <div class="card-row">
-        <article class="card">
+        <article class="card product-choice">
           <h3>Pastries and Sweets</h3>
           <p>The bakery sells breakfast pastries, cookies, bars, and seasonal desserts. Larger orders can be requested for work meetings and family gatherings.</p>
+          <button class="favorite-button" type="button" data-product-id="pastries">Save to Favorites</button>
         </article>
-        <article class="card">
+        <article class="card product-choice">
           <h3>Cakes and Celebrations</h3>
           <p>Cakes can be preordered for birthdays, showers, office events, and other celebrations. Customers can include size, flavor, and allergy concerns in the request form.</p>
+          <button class="favorite-button" type="button" data-product-id="cakes">Save to Favorites</button>
         </article>
         <article class="card">
           <h3>Preorders</h3>
           <p>Customers can send an order request before visiting so the bakery can confirm availability and pickup details.</p>
           <p><a class="button-link" href="contact.html">Start a Preorder</a></p>
         </article>
+      </div>
+    </section>
+
+    <section class="favorites-panel" aria-labelledby="favorites-heading">
+      <h2 id="favorites-heading">My Bakery Favorites</h2>
+      <p id="favorites-status" class="status-message" aria-live="polite">Choose an item above to save it for later.</p>
+      <ul id="favorites-list" class="favorites-list"></ul>
+      <div class="favorites-actions">
+        <a class="button-link" href="contact.html">Use Favorites for a Preorder</a>
+        <button id="clear-favorites" type="button">Clear Favorites</button>
       </div>
     </section>
   </main>

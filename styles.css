@@ -290,3 +290,69 @@ footer {
     padding: 1.5rem;
   }
 }
+
+/* Touchstone 4 interaction and validation styles */
+.product-choice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.65rem;
+}
+
+.product-choice .favorite-button {
+  margin-top: auto;
+}
+
+.favorite-button[aria-pressed="true"] {
+  background-color: #c9873a;
+  color: #2b2927;
+  outline: 2px solid #5a3828;
+}
+
+.favorites-panel {
+  border-width: 2px;
+}
+
+.favorites-list {
+  padding-left: 1.25rem;
+}
+
+.favorites-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.status-message,
+.success-message {
+  font-weight: 700;
+}
+
+.saved-favorites-note {
+  background-color: #fff7ec;
+  border: 2px solid #c9873a;
+}
+
+.error-message {
+  display: block;
+  min-height: 1.5rem;
+  margin-top: 0.25rem;
+  color: #7a1f1f;
+  font-weight: 700;
+}
+
+input.field-error,
+select.field-error,
+textarea.field-error {
+  border: 3px solid #7a1f1f;
+}
+
+.success-message {
+  color: #315b2d;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
